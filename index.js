@@ -1,6 +1,6 @@
 window.onload = function() {
     window_resize();
-    setInterval(tick, 1000/60);
+    window.requestAnimationFrame(tick);
 }
 window.onresize = function() {
     window_resize();
@@ -362,6 +362,7 @@ function tick() {
             run_render();
             break;
     }
+    window.requestAnimationFrame(tick);
 }
 
 function menu_tick() {
